@@ -1,0 +1,9 @@
+production:
+  adapter: jdbcpostgresql
+  host: <%= ENV['DB_SERVER'] %>
+  username: brpmuser
+  password: sa
+  database: brpm26
+  port: <%= ENV['DB_PORT'] %>
+  pool: 20
+  wait_timeout: 10
