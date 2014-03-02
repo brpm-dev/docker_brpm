@@ -1,4 +1,4 @@
-FROM centos
+FROM bmc/brpm:v1.0.0
 MAINTAINER Niek Bartholomeus "niek.bartholomeus@gmail.com"
 
 RUN yum install -y nano unzip
@@ -9,7 +9,7 @@ VOLUME ["/var/log"]
 
 EXPOSE 8080
 
-ENV VERSION 1.0.0
+ENV BRPM_VERSION 1.0.0
 
 RUN wget http://ec2-54-197-117-192.compute-1.amazonaws.com:29419/software-repo/DockerizedBRPM/Application/$VERSION/brpm.war
 
