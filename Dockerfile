@@ -1,4 +1,4 @@
-FROM bmc/brpm:v1.0.0
+FROM centos
 MAINTAINER Niek Bartholomeus "niek.bartholomeus@gmail.com"
 
 RUN yum install -y nano unzip
