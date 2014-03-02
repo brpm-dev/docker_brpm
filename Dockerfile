@@ -11,7 +11,7 @@ EXPOSE 8080
 
 ENV BRPM_VERSION 1.0.0
 
-RUN wget http://ec2-54-197-117-192.compute-1.amazonaws.com:29419/software-repo/DockerizedBRPM/Application/$VERSION/brpm.war
+RUN wget http://ec2-54-197-117-192.compute-1.amazonaws.com:29419/software-repo/DockerizedBRPM/Application/$BRPM_VERSION/brpm.war
 
 RUN mkdir -p /var/lib/tomcat6/webapps/brpm
 RUN unzip brpm.war -d /var/lib/tomcat6/webapps/brpm
