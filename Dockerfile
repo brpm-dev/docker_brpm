@@ -11,13 +11,11 @@ EXPOSE 8080
 
 ENV BRPM_VERSION 1.0.0
 
-RUN wget http://brpm.pulsar-it.be:29419/software-repo/DockerizedBRPM/Application/$BRPM_VERSION/brpm.war
+ADD . /
 
 RUN mkdir -p /var/lib/tomcat6/webapps/brpm
-RUN unzip brpm.war -d /var/lib/tomcat6/webapps/brpm
+RUN unzip /source-files/brpm.war -d /var/lib/tomcat6/webapps/brpm
 RUN chgrp -R tomcat /var/lib/tomcat6/webapps/brpm
-
-ADD . /
 
 RUN mv /source-files/database.yml /usr/share/tomcat6/webapps/brpm/WEB-INF/config
 RUN chmod +x /source-files/*.sh
