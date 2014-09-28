@@ -1,4 +1,4 @@
-FROM centos6
+FROM centos/centos6
 MAINTAINER Niek Bartholomeus "niek.bartholomeus@gmail.com"
 
 RUN yum install -y nano unzip
